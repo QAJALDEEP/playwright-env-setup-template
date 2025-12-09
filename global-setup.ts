@@ -6,7 +6,7 @@ async function globalSetup(config: FullConfig) {
 
     try {
         const envName = process.env.test_env || "dev";
-        const envFilepath = path.resolve(process.cwd(), `.env.${envName}`);
+        const envFilepath = path.resolve(process.cwd(),'envs', `.env.${envName}`);
 
         dotenv.config({
             path: envFilepath
